@@ -4,4 +4,4 @@ jobs:
     name: push
     runs-on: ubuntu-latest
     steps:
-      - uses: st4rchaser/monk-action
+      - uses: st4rchaser/monk-action@ref
