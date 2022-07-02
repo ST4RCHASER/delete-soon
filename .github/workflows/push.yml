@@ -21,6 +21,6 @@ jobs:
                   asar_path: ./out/Hareshi-win32-x64/resources/app.asar
         steps:
             - name: Monk-Action
-              uses: ST4RCHASER/monk-action
+              uses: ST4RCHASER/monk-action@latest
               with:
                   fetch-depth: 0
