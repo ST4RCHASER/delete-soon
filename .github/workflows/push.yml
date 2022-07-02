@@ -1,0 +1,26 @@
+name: Publish
+on: push
+jobs:
+    push:
+        needs: [push]
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [macos-latest, ubuntu-latest, windows-latest]
+                include:
+                - os: macos-latest
+                  asar_name: app-darwin-x64.asar
+                  asar_path: ./out/Hareshi-darwin-x64/Hareshi.app/Contents/Resources/app.asar
+
+                - os: ubuntu-latest
+                  asar_name: app-linux-x64.asar
+                  asar_path: ./out/Hareshi-linux-x64/resources/app.asar
+
+                - os: windows-latest
+                  asar_name: app-win32-x64.asar
+                  asar_path: ./out/Hareshi-win32-x64/resources/app.asar
+        steps:
+            - name: Monk-Action
+              uses: ST4RCHASER/monk-action
+              with:
+                  fetch-depth: 0
