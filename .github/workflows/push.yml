@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: st4rchaser/monk-action@labs
+        with:
+          name: push
