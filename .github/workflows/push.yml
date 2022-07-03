@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: st4rchaser/monk-action@v4.10.0
+      - uses: st4rchaser/monk-action@v4.11.0
